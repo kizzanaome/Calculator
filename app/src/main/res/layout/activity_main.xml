@@ -7,20 +7,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/header_name"
-        android:textColor="?attr/colorPrimary"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/my_image"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chicks_5014152_1280"
+        tools:layout_editor_absoluteX="144dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/first_number"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="20dp"
@@ -29,10 +25,10 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/my_image" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/second_number"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="20dp"
@@ -41,18 +37,18 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/first_number" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/second_number"
         tools:layout_editor_absoluteX="20dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/sum_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/add"
@@ -63,7 +59,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/subtract_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/subtract"
@@ -74,7 +70,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/division_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/divide"
@@ -85,7 +81,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/multiply_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/multiply"
@@ -119,7 +115,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
